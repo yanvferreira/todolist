@@ -25,8 +25,8 @@ public class TodoController {
         return todoService.list();
     }
 
-    List<Todo> update(){
-
+    List<Todo> update(Todo todo){
+        return todoService.update(todo);
     }
 
     List<Todo> delete(){
