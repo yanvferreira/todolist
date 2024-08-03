@@ -22,7 +22,7 @@ public class TodoController {
     }
 
     List<Todo> list(){
-
+        return todoService.list();
     }
 
     List<Todo> update(){
