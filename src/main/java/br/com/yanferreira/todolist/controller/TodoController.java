@@ -29,8 +29,8 @@ public class TodoController {
         return todoService.update(todo);
     }
 
-    List<Todo> delete(){
-
+    List<Todo> delete(Long id){
+        return todoService.delete(id);
     }
 
 }
