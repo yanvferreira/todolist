@@ -46,4 +46,24 @@ class TodolistApplicationTests {
 
 	}
 
+	/*@Test
+	void testeUpdateSuccess() {
+		var todo = new Todo(1, "TODO 2", "DESC TODO 2", true, 1);
+
+		webTestClient
+		.put()
+		.uri("/todos")
+		.bodyValue(todo)
+		.exchange()
+		.expectStatus().isOk()
+		.expectBody()
+		.jsonPath("$").isArray()
+		.jsonPath("$.length").isEqualTo(1)
+		.jsonPath("$[0].id").isEqualTo(todo.getId())
+		.jsonPath("$[0].nome").isEqualTo(todo.getNome())
+		.jsonPath("$[0].descricao").isEqualTo(todo.getDescricao())
+		.jsonPath("$[0].realizado").isEqualTo(todo.isRealizado())
+		.jsonPath("$[0].prioridade").isEqualTo(todo.getPrioridade());
+	}*/
+
 }

@@ -17,7 +17,7 @@ public class Todo {
 
     @NotBlank
     private String nome;
-    
+
     @NotBlank
     private String descricao;
     private boolean realizado;
@@ -33,9 +33,6 @@ public class Todo {
 
     public long getId() {
         return id;
-    }
-    public void setId(long id) {
-        this.id = id;
     }
     public String getNome() {
         return nome;
