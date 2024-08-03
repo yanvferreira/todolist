@@ -2,6 +2,7 @@ package br.com.yanferreira.todolist.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import br.com.yanferreira.todolist.entity.Todo;
@@ -15,11 +16,12 @@ public class TodoService {
         this.todoRepository = todoRepository;
     }
 
-    public List<Todo> create(){
-
+    public List<Todo> create(Todo todo){
+        todoRepository.save(todo);
     }
     public List<Todo> list(){
-
+        Sort sort = Sort.by("prioridade").descending().and(Sort.by("nome").ascending());
+        return todoRepository.findAll(sort);
     }
     public List<Todo> update(){
 
